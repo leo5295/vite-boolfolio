@@ -1,18 +1,19 @@
 <template lang="">
-     <div>
-    <h2>Lista degli articoli</h2>
-    <ul>
-      <div v-for="project in projects" :key="project.id" class="card" >
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.content }}</p>
-        <p>{{ project.type.name }}</p>
-        <p>{{ project.content }}</p>
-        <img :src="project.cover_image != null ? `${baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/200/300'">
-        <span v-for="technology in project.technologies">
-        {{technology.name}}
-        </span>
+    <div>
+    <h2 class="text-center">Lista degli articoli</h2>
+    <div class="d-flex justify-content-center gap-3">
+      <div v-for="project in projects" :key="project.id" style="width: 18rem" class="card">
+        <img :src="project.cover_image != null ? `${baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/200/300'" class="card-img-top">
+        <div class="card-body">
+            <h3 class="card-title">{{ project.title }}</h3>
+            <p class="card-text">{{ project.content }}</p>
+            <p>{{ project.type.name }}</p>
+            <span v-for="technology in project.technologies">
+            {{technology.name}}
+            </span>
+        </div>
     </div>
-    </ul>
+    </div>
   </div>
 </template>
 
@@ -34,4 +35,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+img {
+    height: 250px;
+    object-fit: cover;
+}
+</style>
