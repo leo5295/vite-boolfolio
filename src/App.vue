@@ -1,12 +1,20 @@
 <template>
   <div>
     <!-- <Home /> -->
+    <AppHeader />
     <router-view />
   </div>
 </template>
 
-<script setup>
-import Home from './components/Home.vue'
+<script >
+import Home from './components/Home.vue';
+import AppHeader from './components/AppHeader.vue';
+
+export default {
+  components: {
+    AppHeader
+  }
+}
 </script>
 
 <style scoped lang="scss">

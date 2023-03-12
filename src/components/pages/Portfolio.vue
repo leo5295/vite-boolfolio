@@ -1,5 +1,4 @@
 <template lang="">
-    <!-- <AppHeader/> -->
 <div>
     <h2 class="text-center">Lista degli articoli</h2>
     <div class="d-flex justify-content-center gap-3">
@@ -19,7 +18,7 @@
 </template>
 
 <script>
-// import AppHeader from './AppHeader.vue'
+
 import axios from 'axios';
 
 
@@ -36,9 +35,6 @@ export default {
             this.projects = response.data.results;
         });
     },
-    components: {
-        // AppHeader
-    }
 }
 </script>
 
