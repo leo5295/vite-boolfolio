@@ -11,7 +11,7 @@
                 <span v-for="technology in project.technologies">
                     {{technology.name}}
                 </span>
-                <div class="nav-item"><router-link :to="'/portfolio/' + project.id" class="nav-link"><button class="btn btn-primary">Dettaglio</button></router-link></div>            </div>
+                <div class="nav-item"><router-link :to="'/portfolio/' + project.slug" class="nav-link"><button class="btn btn-primary">Dettaglio</button></router-link></div>            </div>
         </div>
     </div>
 </div>
