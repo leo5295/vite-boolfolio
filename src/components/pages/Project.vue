@@ -41,7 +41,7 @@ export default {
     <template v-else>
       <p>Loading...</p>
     </template>
-  </div>
+</div>
 </template>
 
 
