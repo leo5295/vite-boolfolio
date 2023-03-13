@@ -9,6 +9,9 @@
                 <div class="col d-flex justify-content-center">
                     <h2 class="nav-item"><router-link to="/portfolio" class="nav-link">portfolio</router-link></h2>
                 </div>
+                <div class="col d-flex justify-content-center">
+                    <h2 class="nav-item"><router-link to="/contact" class="nav-link">contact</router-link></h2>
+                </div>
             </div>
         </div>
     </header>
