@@ -19,7 +19,7 @@ export default {
         console.log(this.project);
       }
       else {
-        alert('vaffanculo')
+        alert('chiamata axios fallita')
       }
     });
   },
@@ -28,14 +28,19 @@ export default {
 </script>
 
 <template lang="">
-    <!-- <div>
-    <h2>{{ project.title }}</h2>
-    <p>{{ project.content }}</p>
-    <p>{{ project.type.name }}</p>
-    <span v-for="technology in project.technologies" :key="technology.id">
-      {{technology.name}}
-    </span>
-  </div> -->
+<div>
+    <template v-if="project">
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.content }}</p>
+      <p>{{ project.type.name }}</p>
+      <span v-for="technology in project.technologies" :key="technology.id">
+        {{technology.name}}
+      </span>
+    </template>
+    <template v-else>
+      <p>Loading...</p>
+    </template>
+  </div>
 </template>
 
 
