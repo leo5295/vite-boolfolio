@@ -30,16 +30,18 @@ export default {
 <template lang="">
 <div>
     <template v-if="project">
-      <img :src="project.cover_image != null ? `${baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/200/300'" class="card-img-top">
-      <h2>{{ project.title }}</h2>
-      <p>{{ project.content }}</p>
-      <p>{{ project.type.name }}</p>
-      <span v-for="technology in project.technologies" :key="technology.id">
-        {{technology.name}}
-      </span>
+      <div>
+        <img :src="project.cover_image != null ? `${baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/200/300'" class="card-img-top">
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.content }}</p>
+        <p>{{ project.type.name }}</p>
+        <span v-for="technology in project.technologies" :key="technology.id">
+          {{technology.name}}
+        </span>
+      </div>
     </template>
     <template v-else>
-      <p>Loading...</p>
+      <p>Sto caricando...</p>
     </template>
 </div>
 </template>
